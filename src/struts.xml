@@ -1,0 +1,145 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	 <constant name="struts.multipart.maxSize" value="10240000"></constant>
+    <package name="com.action" extends="struts-default">
+
+    <!-- 定义处理请求URL为login.action的Action -->
+        <action name="register" class="com.action.registerAction" method="register">
+        	<result name="success">login.jsp</result>
+        	<result name="fail">/register.jsp</result>
+        </action>
+        
+        <action name="login" class="com.action.logAction" method="log">
+        	<result name="user_success_nullInformation">/add.jsp</result>
+        	<result name="user_success">/logined.jsp</result>
+        	<result name="admin_success" type="redirect">manage_user.action</result>
+        	<result name="fail_log">/login.jsp</result>     	
+        </action>
+        
+        <action name="checkUserName" class="com.action.checkUserNameAction" method="check">
+        </action>
+        
+        <action name="add" class="com.action.add_informationAction" method="add_information">
+        	<result name="success" >/logined.jsp</result>
+        </action>
+        
+        <action name="rank" class="com.action.rankAction" method="rank">
+             <result name="success">/newranks.jsp</result>
+        </action>
+        
+        <action name="dianzan" class="com.action.dianzanAction" method="dianzan">
+             <result name="success" type="redirect">rank.action</result>
+        </action>
+        
+<!--         <action name="dianzan" class="com.action.dianzanAction" method="dianzan">
+        <result name="success" type="redirectAction">/rank.action</result>
+        </action> -->
+ 
+        <action name="zhuye" class="com.action.zhuyeAction" method="zhuye">
+        <result name="success">/zhuye.jsp</result>
+        </action>
+        
+
+     <action name="manage_user" class="com.action.manageUserAction" method="manage">
+        	<result name="success">/manage_user.jsp</result>
+       </action> 
+       
+       <action name="delete" class="com.action.deleteAction" method="delete">
+        	<result name="success" type="redirect">manage_user.action</result>
+        </action>
+        
+           <action name="add_liuyan" class="com.action.add_liuyanAction" method="add_liuyan">
+               <result name="success" type="redirect">liuyan.action</result>
+        </action>
+        
+        
+      <action name="editmymess" class="com.action.editmymessAction" method="editmymess">
+                <result name="success"  type="redirect">liuyan.action</result>
+        </action>
+        
+        <action name="liuyan" class="com.action.liuyanAction" method="liuyan">
+        <result name="success" >/liuyan.jsp</result>
+        </action>
+        
+
+   
+       
+     <!--         
+        <action name="create_house" class="com.tiantian.action.create_houseAction" method="create_house">
+        	<result name="success">/upload_house_information.jsp</result>
+        	<result name="fail" >/fail.jsp</result>
+        </action>
+        <action name="updata_password" class="com.tiantian.action.updata_passwordAction" method="updata_password">
+        	<result name="success">/user_view_display.htm</result>
+        </action>
+        <action name="updata_user_information" class="com.tiantian.action.updata_user_informationAction" method="updata_user_information">
+        	<result name="success">/alter_user_information.jsp</result>
+        </action>
+        <action name="my_house" class="com.tiantian.action.my_houseAction" method="my_house"> 
+        	<result name="success">/user_view_house.jsp</result>
+        </action>
+        <action name="manage_house" class="com.tiantian.action.manage_houseAction" method="manage_house">
+        	<result name="success">/manage_view_house.jsp</result>
+        </action>
+        <action name="examine_agree" class="com.tiantian.action.examine_agreeAction" method="examine_agree">
+        	<result name="success" type="redirectAction">/manage_house.action</result>
+        </action>
+        <action name="examine_refuse" class="com.tiantian.action.examine_refuseAction" method="examine_refuse">
+        	<result name="success" type="redirectAction">/manage_house.action</result>
+        </action>
+     
+        <action name="my_rent_house" class="com.tiantian.action.my_rent_houseAction" method="my_rent_house">
+        	<result name="success">/my_rent_house.jsp</result>
+        </action>
+        <action name="house_information" class="com.tiantian.action.house_informationAction" method="house_information">
+        	<result name="change1">/rented_house_detail.jsp</result>
+        	<result name="change2" >/house_detail.jsp</result>
+        	<result name="fail">/fail.jsp</result>
+        </action>
+        <action name="comment" class="com.tiantian.action.commentAction" method="comment">
+        	<result name="success">/house_detail.jsp</result>
+        </action>
+        <action name="operate_state" class="com.tiantian.action.operate_stateAction" method="operate_state">
+        	<result name="xiajia_success" type="redirectAction">/my_house.action</result>
+        	<result name="quxiao_success" type="redirectAction">/my_rent_house.action</result>
+        	<result name="shanchu_success" type="redirectAction">/my_house.action</result>
+        	<result name="fail">/fail.jsp</result>
+        	<result name="tongyi_success" type="redirectAction">/my_house.action</result>
+        	<result name="jvjue_success" type="redirectAction">/my_house.action</result>
+        </action>
+        <action name="insert_rent_list" class="com.tiantian.action.insert_rent_listAction" method="insert_rent_list">
+        	<result name="success">/search_view_1.htm</result>
+        </action>
+        
+      	<action name="select_house" class="com.tiantian.action.select_houseAction" method="select_house">
+      		<result name="success">/select_result.jsp</result>
+      	</action>
+      	<action name="add_comment" class="com.tiantian.action.add_commentAction" method="add_comment">
+      		<result name="success">/rented_house_detail.jsp</result>
+      	</action>
+      	
+      	<action name="current_house_information" class="com.tiantian.action.current_house_informationAction" method="current_house_information">
+      		<result name="success">/update_house_information.jsp</result>
+      	</action>
+      	<action name="update_house_information" class="com.tiantian.action.update_house_informationAction" method="update_house_information">
+      		<result name="success" >/update_house_information.jsp</result>
+      	</action>
+     -->
+    </package>
+    	<package name="load" extends = "struts-default">
+			<action name="uploadAction" class = "com.action.UploadAction">
+			<result name = "success">/personalData.jsp</result>
+			<result name = "error">/error.jsp</result>
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2M</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+	</package>
+</struts>   
+
+
+
+

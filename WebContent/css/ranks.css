@@ -1,0 +1,148 @@
+#rank{
+	background-color: #ffffff;
+	padding: 25px 300px;
+	height: auto;
+}
+
+#data-ranks{
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+
+}
+
+ .projectname{
+	height: 50px;
+	font-size: 25px;
+	color: #18a3b7;
+} 
+
+.tablename{
+	width: 100%;
+	height: 100%;
+}
+
+.tdfont{
+	font-size: 18px;
+	text-align: center;
+	background-color:#3F2E42;
+}
+
+.tdfont:hover{
+	font-size: 20px;
+	text-align: center;
+	background-color: #18a3b7;
+	color: #ffffff;
+	transform:scale(1.1);
+	transition:all .5s ease-in-out;
+}
+.tdfont:visited{
+	font-size: 25px;
+	text-align: center;
+	background-color: #18a3b7;
+	color: #ffffff;
+	transform:scale(1.1);
+	transition:all .5s ease-in-out;
+}
+
+.tdmy{
+	font-size: 18px;
+	font-weight:bold;
+	text-align: center;
+	color:white;
+	background-color:#3F2E42;
+}
+
+.tdmy:hover{
+	font-size: 20px;
+	text-align: center;
+	background-color: #3F2E42;
+	color: #ffffff;
+	transform:scale(1.1);
+	transition:all .5s ease-in-out;
+}
+.tdmy:visited{
+	font-size: 25px;
+	text-align: center;
+	background-color: #3F2E42;
+	color: #00CD00;
+	transform:scale(1.1);
+	transition:all .5s ease-in-out;
+}
+
+td{
+	text-align: center;
+}
+
+
+.tdnum{
+	width:10%;
+	padding:0 2px;
+}
+
+.tdimg{
+	width: 15%;
+}
+
+.tdname{
+	width: 15%;
+}
+
+.widthright1{
+	width: 60%;
+	background-color: #18a3b7;
+	padding:0px 3px;
+}
+
+.widthright2{
+	width: 80%;
+	background-color: white;
+	padding:0px;
+}
+
+.data-input{
+	width: 100%;
+	height: 50%;
+	border: none;
+	background-color: transparent;
+	text-align:left;
+	
+	padding:0px 5px;
+}
+
+tr{
+	background-color: white;
+}
+tr:nth-child(even){
+	background-color: #18a3b7;
+}
+
+img{
+
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+img:hover{
+	-webkit-animation: animlogo 3s infinite linear;
+	-moz-animation: animlogo 3s infinite linear;
+	animation: animlogo 3s infinite linear;
+}
+
+@-webkit-keyframes animlogo{
+	0%{-webkit-transform:rotate(360deg);}
+}
+
+@-moz-keyframes animlogo{
+	0%{-moz-transform:rotate(360deg);}
+}
+
+@keyframes animlogo{
+	0%{transform:rotate(360deg);}
+}
+
+.hrtable{
+width:100%;
+height:150px;
+}

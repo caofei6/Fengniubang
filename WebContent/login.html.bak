@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<!-- Page title -->
+		<title>Login</title>
+	</head>
+	<body>
+	<!-- script for menu -->
+				<script>
+				$( "span.menu" ).click(function() {
+				  $( ".navbar" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+			</script>
+	<div id="container">
+		<div class="logo">
+			<a href="#"><img src="images/head-bg.jpg" alt="" /></a>
+		</div>
+		<div id="box" style="text-align:center; overflow:hidden;">
+			<form action="dologin.jsp" method="post">
+			<p class="main">
+				<label>”√ªß√˚: </label>
+			    <input /> 
+				<br/><br/>
+				<label>√‹¬Î:&nbsp; </label>
+				<input type="password" name="password" value="">	
+			</p>
+			<p class="space">
+				<input type="submit" value="µ«¬º" class="login" style="cursor: pointer;"/>
+			</p>
+			</form>
+		</div>
+	</div>
+	</body>
+</html>
